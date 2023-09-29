@@ -1,3 +1,4 @@
 {
-  "python.defaultInterpreterPath": "/Collider/env/bin/python"
+  "python.defaultInterpreterPath": "/Collider/env/bin/python",
+  "python.envFile": "/Collider/env/"
 }
