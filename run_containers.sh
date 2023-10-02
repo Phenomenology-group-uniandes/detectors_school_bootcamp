@@ -7,7 +7,7 @@ git pull ;
 docker build -t ds_jupyter_server .  --no-cache ;
 
 # Run 20 containers, linking port 8080 of each container with a port in 9000-9020
-for i in {9000..9019}
+for i in {9000..9020}
 do
   container_name="ds_jupyter_server_$i"
   docker run -it -t \
