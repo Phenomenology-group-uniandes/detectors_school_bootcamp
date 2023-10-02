@@ -15,7 +15,7 @@ do
   --mount type=bind,source=/disco2,target=/disco2,readonly \
   --mount type=bind,source=/disco3,target=/disco3,readonly \
   --mount type=bind,source=/disco4,target=/disco4,readonly \
-  --mount type=bind,source=/Madgraph_Simulations,target=/Madgraph_Simulations,readonly \
+  --mount type=bind,source=/disco1/Madgraph_Simulations,target=/Madgraph_Simulations,readonly \
   -d -p $i:8080 --name $container_name ds_jupyter_server
 done
 
