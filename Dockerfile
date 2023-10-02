@@ -8,8 +8,8 @@ RUN cd /root/ && \
 
 # Update pip
 RUN  source /root/.bashrc && \
-    pip install --upgrade pip && \
-    pip install -r /root/detectors_school_bootcamp/requirements.txt
+    /Collider/env/bin/pip install --upgrade pip && \
+    /Collider/env/bin/pip install -r /root/detectors_school_bootcamp/hep_pheno_tools/requirements.txt
 
 # Password for code-server
 ENV PASSWORD="Feynman2023"
