@@ -4,7 +4,7 @@
 git pull ;
 
 # Build the Docker image with the tag "ds_jupyter_server" and no cache
-docker build -t ds_jupyter_server . ;
+docker build -t ds_jupyter_server .  --no-cache ;
 
 # Run 20 containers, linking port 8080 of each container with a port in 9000-9020
 for i in {9000..9019}
