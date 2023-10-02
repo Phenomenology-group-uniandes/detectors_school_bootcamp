@@ -16,6 +16,7 @@ do
   --mount type=bind,source=/disco3,target=/disco3,readonly \
   --mount type=bind,source=/disco4,target=/disco4,readonly \
   --mount type=bind,source=/disco1/Madgraph_Simulations,target=/Madgraph_Simulations,readonly \
+  --cpus=2 -memory-swap 2048m
   -d -p $i:8080 --name $container_name ds_jupyter_server
 done
 
