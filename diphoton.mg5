@@ -1,0 +1,39 @@
+import model heft
+generate p p > a a $ h
+output diphoton_higgs_bkg
+
+launch diphoton_higgs_bkg -m
+12
+SHOWER=Pythia8
+DETECTOR=Delphes
+set nevents 50000
+set iseed 32
+set sde_strategy 1
+set cut_decays True
+set ebeam1 6500
+set ebeam2 6500
+set pta 25
+set etaa 1.0
+pythia8_card.dat
+delphes_card_ATLAS.dat
+
+import model heft
+generate p p > h , h > a a
+output diphoton_higgs
+
+launch diphoton_higgs -m
+12
+SHOWER=Pythia8
+DETECTOR=Delphes
+set nevents 50000
+set iseed 53
+set sde_strategy 1
+set cut_decays True
+set ebeam1 6500
+set ebeam2 6500
+set pta 25
+set etaa 1.0
+pythia8_card.dat
+delphes_card_ATLAS.dat
+
+exit
