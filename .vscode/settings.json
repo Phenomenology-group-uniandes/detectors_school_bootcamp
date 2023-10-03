@@ -1,4 +1,40 @@
 {
   "python.defaultInterpreterPath": "/Collider/env/bin/python",
   "python.envFile": "/Collider/env/"
+    // Python
+    "[python]": {
+      "editor.defaultFormatter": "ms-python.black-formatter",
+      "editor.formatOnSave": true,
+      "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+      },
+    },
+  
+    // Python: isort and black
+    "isort.args": [
+      "--profile",
+      "black"
+    ],
+  
+    // Max line length black
+    "black-formatter.args": [
+      "--line-length",
+      "100"
+    ],
+    // Max line length flake
+    "flake8.args": [
+      "--max-line-length=100"
+    ],
+    // View line on editor
+    "editor.rulers": [
+      {
+        "column": 95,
+        "color": "#22ff002d",
+      },
+      {
+        "column": 100,
+        "color": "#ff000068",
+      }
+    ],
+  
 }

@@ -1,0 +1,3 @@
+name,path,xs(pb)
+signal,/home/pheno/github/detectors_school_bootcamp/diphoton_higgs,0.004991
+bkg,/home/pheno/github/detectors_school_bootcamp/diphoton_higgs_bkg,4.047
