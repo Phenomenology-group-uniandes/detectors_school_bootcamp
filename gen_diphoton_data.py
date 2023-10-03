@@ -5,7 +5,7 @@ import pandas as pd
 from ROOT import TChain
 
 from hep_pheno_tools.abstract_particle import Particle, get_kinematics_row
-from hep_pheno_tools.analysis_tools import Quiet, generate_dataframe
+from hep_pheno_tools.analysis_tools import Quiet
 from hep_pheno_tools.delphes_reader.classifier import get_photons
 from hep_pheno_tools.delphes_reader.loader import DelphesLoader
 
