@@ -9,23 +9,6 @@ from hep_pheno_tools.analysis_tools import Quiet
 from hep_pheno_tools.delphes_reader.classifier import get_photons
 from hep_pheno_tools.delphes_reader.loader import DelphesLoader
 
-
-class PhotonParticle(Particle):
-    def __init__(self, event, j):
-        super().__init__()
-        self.tlv.SetPtEtaPhiM(
-            event.GetLeaf("Photon.PT").GetValue(j),
-            event.GetLeaf("Photon.Eta").GetValue(j),
-            event.GetLeaf("Photon.Phi").GetValue(j),
-            0,
-        )
-        self.charge = 0
-        self.kind = "photon"
-        self.name = f"{self.kind}_{{{j}}}"
-
-        self.isolation = event.GetLeaf("Photon.IsolationVar").GetValue(j)
-
-
 run_mg5 = True
 if run_mg5:
     subprocess.call(["mg5_aMC", "diphoton.mg5"])
@@ -48,7 +31,6 @@ df_paths = df_paths.from_dict(
 )
 
 df_paths.to_csv("paths.csv", index=False)
-
 
 distributions = {}
 with Quiet():
